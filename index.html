@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tes Jodoh</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="fx-canvas"></canvas>
+
+  <main class="container">
+    <h1 class="title">Tes Jodoh</h1>
+    <p class="subtitle">Cek persentase kecocokan cinta kalian berdua</p>
+
+    <div class="matcher">
+      <!-- Person 1 -->
+      <section class="person-card">
+        <input type="text" id="name1" class="input-box" placeholder="Nama Kamu" autocomplete="off">
+        <div class="gender-select">
+          <label><input type="radio" name="gender1" value="L"> Pria</label>
+          <label><input type="radio" name="gender1" value="P"> Wanita</label>
+        </div>
+      </section>
+
+      <!-- Center Heart Indicator / Button -->
+      <div class="heart-wrap">
+        <button id="heartBtn" class="heart-btn" disabled aria-label="Hitung Kecocokan">
+          <svg viewBox="0 0 100 90">
+            <path d="M50 85 C20 60 5 40 5 25 A 20 20 0 0 1 50 20 A 20 20 0 0 1 95 25 C 95 40 80 60 50 85 Z"/>
+            <path class="crack-line" d="M50 22 L45 35 L55 48 L46 62 L52 75 L50 84" />
+          </svg>
+          <span id="percentText" class="percent-display">?</span>
+        </button>
+      </div>
+
+      <!-- Person 2 -->
+      <section class="person-card">
+        <input type="text" id="name2" class="input-box" placeholder="Nama Pasangan" autocomplete="off">
+        <div class="gender-select">
+          <label><input type="radio" name="gender2" value="L"> Pria</label>
+          <label><input type="radio" name="gender2" value="P"> Wanita</label>
+        </div>
+      </section>
+    </div>
+
+    <div id="resultText" class="result-banner"></div>
+    <button id="resetBtn" class="reset-btn hidden">Mulai Ulang</button>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
